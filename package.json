@@ -1,0 +1,22 @@
+{
+  "name": "feeds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev:app": "npm --workspace app run dev",
+    "dev:server": "npm --workspace server start",
+    "install:all": "npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "app",
+    "server"
+  ],
+  "dependencies": {
+    "vue-router": "^4.6.3"
+  }
+}

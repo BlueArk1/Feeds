@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body,
+#app {
+  font-family: "Stack Sans Text", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #212121;
+  color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  background-color: #5e11ee;
+  color: white;
+  padding: 0.2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+a {
+  color: rgb(104, 177, 245);
+}
+
+
+
+.feed {
+  margin: 0.2rem;
+}
+
+.refresh-btn {
+  position: absolute;
+  right: 1em;
+  padding: 0.7em;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+}
+
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background-color: #1f2937;
+  border: none;
+  color: #d1d5db;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.tabs button.active {
+  background-color: #5e11ee;
+  color: #ffffff;
+}
+
+.tabs button:hover:not(.active) {
+  background-color: #374151;
+}
+
+.tab-content {
+  margin-top: 1rem;
+}
+
+.feed {
+  margin-bottom: 2rem;
+}
+
+.feed h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+/* Reddit-style card */
+.article-card {
+  background-color: #28292c;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease, background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.article-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.article-title {
+  font-weight: 600;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.article-source {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-left: 0.5rem;
+}
+
+/* Sensitive pill */
+.pill {
+  background-color: #b91c1c;
+  color: #fef3c7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* Snippet / preview */
+.article-preview {
+  color: #c2c2c2;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Highlight keywords */
+.highlight {
+  background-color: #b45309;
+  color: #fef3c7;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Mobile-friendly tweaks */
+@media (max-width: 600px) {
+  .article-card {
+    padding: 0.8rem;
+  }
+
+  .article-preview {
+    font-size: 0.9rem;
+  }
+
+  .article-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .article-source {
+    margin-left: 0;
+    margin-top: 0.2rem;
+  }
+}
