@@ -6,21 +6,22 @@ export default defineConfig({
     plugins: [
         vue(),
         inject({
-            Buffer: ['buffer', 'Buffer']   // ⬅️ add global Buffer polyfill
+            Buffer: ['buffer', 'Buffer']
         })
     ],
     server: {
         host: true,
         port: 5173,
+        allowedHosts: ['feed.protogen.tools'], // <-- add this line
         proxy: {
             '/api': {
-                target: 'http://192.168.0.24:4000',
+                target: 'http://localhost:4000',
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, '/api')
             }
         }
     },
     optimizeDeps: {
-        include: ['buffer']   // ⬅️ ensure Vite pre-bundles Buffer
+        include: ['buffer']
     }
 })

@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 
-config/*
+config/keywords.yaml
