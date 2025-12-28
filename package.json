@@ -5,7 +5,8 @@
   "scripts": {
     "dev:app": "npm --workspace app run dev",
     "dev:server": "npm --workspace server start",
-    "install:all": "npm install"
+    "install:all": "npm install",
+    "dev:all": "concurrently \"npm run dev:app\" \"npm run dev:server\""
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,8 @@
   ],
   "dependencies": {
     "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }
